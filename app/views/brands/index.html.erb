@@ -1,0 +1,41 @@
+<div class="col-lg-12">
+
+
+<div class="card" style="width: 100%;">
+
+  <div class="card-body">
+    <h5 class="card-title">Brands List</h5>
+      <p class="card-text"><%= link_to 'New Brand', new_brand_path,class:"page_new_button" %></p>
+  </div>
+
+
+</div>
+<!-- <h3>Brands List</h3> -->
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Headquarters</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Show</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @brands.each do |brand| %>
+    <tr>
+      <td><%= brand.name %></td>
+      <td><%= brand.headquarters %></td>
+      <td><%= brand.phone %></td>
+      <td><%= link_to 'Show', brand_path(brand) %></td>
+      <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
+      <td><%= link_to 'Delete', brand_path(brand),
+              method: :delete,
+              data: { confirm: 'Emin misin?' } %></td>
+    </tr>
+    </tbody>
+  <% end %>
+</table>
+</div>

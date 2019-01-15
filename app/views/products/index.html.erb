@@ -1,0 +1,39 @@
+<div class="col-lg-12">
+
+
+
+
+  <div class="card" style="width: 100%;">
+
+    <div class="card-body">
+      <h5 class="card-title">Products List</h5>
+        <p class="card-text"><%= link_to 'New Product', new_product_path,class:"page_new_button" %></p>
+    </div>
+
+
+  </div>
+
+<table class="table">
+  <thead  class="thead-dark">
+  <tr>
+    <th>ID</th>
+    <th>İsim</th>
+    <th>Renk</th>
+    <th>Fiyat</th>
+    <th>Marka</th>
+  </tr>
+</thead>
+<tbody>
+  <% @products.each do |product| %>
+    <tr>
+      <th><%= product.id %></th>
+      <td><%= product.name %></td>
+      <td><%= product.color %></td>
+      <td><%= product.price %></td>
+      <td><%= product.brand.name %></td>
+    </tr>
+  <% end %>
+</tbody>
+
+</table>
+</div>

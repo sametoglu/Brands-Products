@@ -1,0 +1,45 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+#header{
+  float:left;width:100%;height:50px;border-bottom:4px solid #e1e1e1;line-height:50px;margin-bottom:30px;
+  h3{
+    float:left;width:300px;font-size:22px;font-family: 'Montserrat', sans-serif;line-height:50px;
+    a{color:#1a1a1a;}
+  }
+  ul{
+    float:right;padding:0;margin:0;
+    li{
+      float:left;list-style:none;margin:0;padding:0;
+      a{color:#333;padding: 5px 10px;}
+    }
+  }
+}
+h1{
+  float:left;width:300px;font-size:50px;font-family: 'Montserrat', sans-serif;line-height:50px;
+}
+.page_title{float:left;width:100%;}
+#content{float:left;width:100%;height:100vh;}
+#error_explanation{float:left;width:100%;height:auto;}
+.form_body{float:left;width:100%;
+  input{width:200px;}
+}
+.field_with_errors{float:left;width:100%;margin:0;padding:0;
+input{margin-bottom:15px;margin-top:5px;}
+}
+.page_new_button{float:left;color:#fff;background:#ff9900;padding:7px 12px;border-radius:5px;transform: all .5s;
+    &:hover{background:	 #ffb84d;color:#fff;text-decoration:none;}
+}
